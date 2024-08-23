@@ -2,18 +2,19 @@
 <html>
     <head>
         <title>Nick's Amazing Website</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <!-- All content goes here -->
-        <div>
+        <div id="all-contents">
             <nav>
                 <h1>Nick's Glorious Website</h1>
-                <ul>
-                    <li>
+                <ul id="nav-ul">
+                    <li class="nav-li">
                         <a href="index.html"> Home </a>
                     </li>
-                    <li>
+                    <li class="nav-li">
                         <a href="portfolio.html"> Portfolio </a>
                     </li>
                 </ul>
@@ -21,18 +22,18 @@
 
             <main>
                 <!-- Sidebar section -->
-                 <div>
-                    <img
+                 <div class="sidebar">
+                    <img class="sidebar-img"
                     src="data:image/png;base64,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">
 
                  </div>
 
                  <!-- Content Section -->
-                  <div>
+                  <div class="content">
                     <h2>Nicholas Lewellen</h2>
                     <p>Student at East Ascension High</p>
                     <!-- interests section -->
-                     <div>
+                     <div id="interests">
                         <h3>Interests</h3>
                         <ul>
                             <li>Reading</li>
